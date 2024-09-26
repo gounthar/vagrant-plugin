@@ -200,7 +200,7 @@ public class VagrantWrapper {
     List<FilePath> dirList = this.containingFolder.list();
 
     ListIterator<FilePath> i = dirList.listIterator();
-    Boolean error_found = true;
+    Boolean error_found = false;
     while (i.hasNext()) {
         FilePath file = i.next();
         if (file.getName().equals(this.vagrantFileName)) {
