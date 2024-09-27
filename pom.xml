@@ -52,7 +52,7 @@
     </pluginRepositories>
 
     <scm>
-        <connection>scm:git:ssh://github.com/jenkinsci/vagrant-plugin.git</connection>
+        <connection>scm:git:https://github.com/jenkinscivagrant-plugin.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/jenkinsci/vagrant-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/vagrant-plugin</url>
         <tag>vagrant-1.0.3-SNAPSHOT</tag>
