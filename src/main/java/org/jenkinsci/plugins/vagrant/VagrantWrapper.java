@@ -193,29 +193,24 @@ public class VagrantWrapper {
 
   private Boolean validate() throws IOException, InterruptedException {
     if (!this.parseVagrantEnvironment()) {
-      listener.getLogger().println("Error parsing environment");
-      return false;
+        listener.getLogger().println("Error parsing environment");
+        return false;
     }
 
     List<FilePath> dirList = this.containingFolder.list();
-    if (dirList == null) {
-      listener.getLogger().println("Failed to iterate on remote directory " + this.containingFolder.getName());
-      return false;
-    }
 
-    ListIterator i = dirList.listIterator();
+    ListIterator<FilePath> i = dirList.listIterator();
     Boolean error_found = false;
     while (i.hasNext()) {
-      FilePath file = (FilePath) i.next();
-      if (file.getName().equals(this.vagrantFileName)) {
-        error_found = false;
-        break;
-      }
+        FilePath file = i.next();
+        if (file.getName().equals(this.vagrantFileName)) {
+            error_found = false;
+            break;
+        }
     }
     if (error_found) {
-      listener.getLogger().println("Failed to find Vagrantfile \"" + this.vagrantFileName + "\" in folder \"" + this
-              .containingFolder.getRemote());
-      return false;
+        listener.getLogger().println("Failed to find Vagrantfile \"" + this.vagrantFileName + "\" in folder \"" + this.containingFolder.getRemote());
+        return false;
     }
 
     Launcher.ProcStarter settings = launcher.launch();
@@ -228,8 +223,8 @@ public class VagrantWrapper {
     Proc proc = settings.start();
     int exitCode = proc.join();
     if (exitCode > 0) {
-      return false;
+        return false;
     }
     return true;
-  }
+}
 }
