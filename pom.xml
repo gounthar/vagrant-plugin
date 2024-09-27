@@ -11,6 +11,8 @@
     <properties>
         <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
         <jenkins.version>2.452.4</jenkins.version>
+        <spotbugs.effort>Max</spotbugs.effort>
+        <spotbugs.threshold>Low</spotbugs.threshold>
     </properties>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>vagrant</artifactId>
@@ -68,21 +70,21 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-  <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/command-launcher -->
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <artifactId>command-launcher</artifactId>
-      <version>1.0</version>
-    </dependency>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/command-launcher -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>command-launcher</artifactId>
+            <version>1.0</version>
+        </dependency>
 
-    <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <artifactId>matrix-project</artifactId>
-      <version>1.0</version>
-    </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>matrix-project</artifactId>
+            <version>1.0</version>
+        </dependency>
 
-  </dependencies>
+    </dependencies>
     <build>
         <plugins>
             <plugin>
