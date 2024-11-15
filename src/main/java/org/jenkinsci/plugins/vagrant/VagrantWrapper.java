@@ -49,9 +49,7 @@ public class VagrantWrapper {
 
   private static VagrantBuildSettings extractSettingsFromBuild(AbstractBuild build) {
     for (Environment e : build.getEnvironments()) {
-      if (e instanceof VagrantBuildSettings.VagrantBuildSettingsEnvironment) {
-        VagrantBuildSettings.VagrantBuildSettingsEnvironment env = (VagrantBuildSettings
-                .VagrantBuildSettingsEnvironment) e;
+      if (e instanceof VagrantBuildSettings.VagrantBuildSettingsEnvironment env) {
         return env.getBuildSettings();
       }
     }
