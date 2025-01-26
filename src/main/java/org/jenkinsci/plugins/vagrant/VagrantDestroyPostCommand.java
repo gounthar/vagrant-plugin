@@ -11,10 +11,6 @@ import hudson.tasks.Publisher;
 import hudson.tasks.Recorder;
 import org.kohsuke.stapler.DataBoundConstructor;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Destroy Vagrant VM in Post-build actions.
  */

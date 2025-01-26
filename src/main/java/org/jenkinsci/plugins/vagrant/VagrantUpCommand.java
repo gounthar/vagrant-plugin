@@ -7,7 +7,6 @@ package org.jenkinsci.plugins.vagrant;
 import hudson.Launcher;
 import hudson.Extension;
 import hudson.model.Descriptor;
-import hudson.model.Environment;
 import hudson.tasks.Builder;
 import hudson.model.AbstractBuild;
 import hudson.model.BuildListener;
